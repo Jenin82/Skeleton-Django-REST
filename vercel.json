@@ -6,9 +6,9 @@
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
-        "runtime": "python3.10",
-        "command": "python manage.py collectstatic --noinput && python manage.py migrate && python manage.py runserver"
-      }
+        "runtime": "python3.10"
+      },
+      "command": "python manage.py collectstatic --noinput && python manage.py migrate && python manage.py runserver"
     },
     {
       "src": "build_files.sh",
