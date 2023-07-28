@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'user',
+    'rest_framework',
+    
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,12 +77,24 @@ WSGI_APPLICATION = 'Skeleton_Django_REST.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': '3cvSu1oAdLnr',
+        'HOST': 'ep-sparkling-river-20278072.ap-southeast-1.postgres.vercel-storage.com',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
